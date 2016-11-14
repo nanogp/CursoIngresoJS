@@ -1,6 +1,7 @@
 //Debemos lograr mostrar un mensaje al presionar el botón  'MOSTRAR'.
-function Mostar()
+function Mostrar()
 {
-	
+	//window.alert sino, ventana modal
+	//window.confirm
+	alert("Esto funciona de maravilla");
 }
-
