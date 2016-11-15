@@ -4,8 +4,8 @@ Mostar el resulto por medio de "ALERT"*/
 function sumar()
 {
 	// numeroUno numeroDos
-	var uno 		= document.getElementById('numeroUno').value;
-	var dos 		= document.getElementById('numeroDos').value;
-	var resultado 	= parseInt(uno) + parseInt(dos);
+	var numeroUno	= document.getElementById('numeroUno').value;
+	var numeroDos	= document.getElementById('numeroDos').value;
+	var resultado	= parseInt(numeroUno) + parseInt(numeroDos);
 	alert("la suma es " + resultado);
 }
