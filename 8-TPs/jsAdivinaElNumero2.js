@@ -67,15 +67,6 @@ function verificar()
         } 
     else 
         {
-    //         if (numero < numeroSecreto) 
-    //             {
-    //                 alert("falta...");
-    //             } 
-    //         else 
-    //             {
-    //                 alert("se pasó…");
-    //             }
-
             contadorIntentos++;
             document.getElementById('intentos').value = contadorIntentos;
 

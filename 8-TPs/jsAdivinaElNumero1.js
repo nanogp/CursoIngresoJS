@@ -12,40 +12,40 @@ var contadorIntentos;
 
 function comenzar()
 {
-    //Genero el número RANDOM entre 1 y 100
-    numeroSecreto       = Math.floor(Math.random()*100);
-    contadorIntentos    = 1;
+	//Genero el número RANDOM entre 1 y 100
+	numeroSecreto       = Math.floor(Math.random()*100) + 1;
+	contadorIntentos    = 0;
 
-    document.getElementById('intentos').value = contadorIntentos;
+	document.getElementById('intentos').value = contadorIntentos;
 
-    //alert(numeroSecreto );
+	console.log("numeroSecreto: " + numeroSecreto);
 
 }
 
 function verificar()
 {
-    var numero;
+	var numero;
 
-    numero = document.getElementById('numero').value;
+	numero = document.getElementById('numero').value;
 
-    if (numero == numeroSecreto) 
-        {
-            alert("Usted es un ganador!!! y en solo " + contadorIntentos + " intentos");
-        } 
-    else 
-        {
-            if (numero < numeroSecreto) 
-                {
-                    alert("falta...");
-                } 
-            else 
-                {
-                    alert("se pasó…");
-                }
+	if (numero == numeroSecreto) 
+		{
+			alert("Usted es un ganador!!! y en solo " + contadorIntentos + " intentos");
+		} 
+	else 
+		{
+			if (numero < numeroSecreto) 
+				{
+					alert("falta...");
+				} 
+			else 
+				{
+					alert("se pasó…");
+				}
 
-            contadorIntentos++;
-            document.getElementById('intentos').value = contadorIntentos;
+			contadorIntentos++;
+			document.getElementById('intentos').value = contadorIntentos;
 
-        }
+		}
 
 }
