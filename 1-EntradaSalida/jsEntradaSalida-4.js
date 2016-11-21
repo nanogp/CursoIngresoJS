@@ -9,4 +9,3 @@ function Mostrar()
 	dato = prompt("ingrese dato");
 	document.getElementById("elNombre").value = dato;
 }
-
