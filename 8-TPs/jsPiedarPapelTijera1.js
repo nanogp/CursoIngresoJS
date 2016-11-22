@@ -8,7 +8,7 @@ var eleccionMaquina;
 
 function VerSiGano(eleccionPersona)
 {
-    // alert("Persona: " + eleccionPersona + " Vs Maquina: " + eleccionMaquina);
+    alert("Persona: " + eleccionPersona + " vs Maquina: " + eleccionMaquina);
     switch (eleccionMaquina)
     {
         case 'piedra':

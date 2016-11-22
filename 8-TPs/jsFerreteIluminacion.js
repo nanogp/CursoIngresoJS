@@ -21,9 +21,10 @@ function CalcularPrecio ()
     marcaLampara     = document.getElementById('Marca').value;
     precioUnitario   = 35;
     
-    if (cantidadLamparas >= 6) //caso A
+    if (cantidadLamparas > 5) //caso A
     {
         porcentajeDescuento = 0.5; //50%
+
     }
     else if (cantidadLamparas == 5) //caso B
     {
@@ -34,7 +35,8 @@ function CalcularPrecio ()
         else
         {
             porcentajeDescuento = 0.7; //30%
-        }
+        } //if(marcaLampara == "ArgentinaLuz")
+
     }
     else if (cantidadLamparas == 4) //caso C
     {
@@ -45,7 +47,8 @@ function CalcularPrecio ()
         else
         {
             porcentajeDescuento = 0.8; //20%
-        }
+        } //if(marcaLampara == "ArgentinaLuz" || marcaLampara == "FelipeLamparas")
+
     }
     else if (cantidadLamparas == 3) //caso D
     {
@@ -60,12 +63,14 @@ function CalcularPrecio ()
         else
         {
             porcentajeDescuento = 0.95; //5%
-        }
+        } //if(marcaLampara == "ArgentinaLuz")
+
     }
     else //cantidad menor o igual a 2
     {
         porcentajeDescuento = 1; //0%
-    }
+
+    } //if (cantidadLamparas > 5)
 
     precioDescuento = precioUnitario * cantidadLamparas * porcentajeDescuento;
 
@@ -73,8 +78,9 @@ function CalcularPrecio ()
     {
         ingresosBrutos  = precioDescuento * 0.1;
         precioDescuento = precioDescuento * 1.1;
-        alert("Usted pago " + ingresosBrutos + " de IIBB.")
+        alert("Usted pago " + (ingresosBrutos).toFixed(2) + " de IIBB.");
+
     }
 
-    document.getElementById('precioDescuento').value = parseInt(precioDescuento);
+    document.getElementById('precioDescuento').value = (precioDescuento).toFixed(2);
 }
